@@ -30,3 +30,18 @@ def informacoes_paciente():
         "Gênero Biológico": genero_selecionado,
         "Identificação de Gênero": genero_identificacao_selecionado
         }
+
+def sintomas():
+    #Usuário irá marcar quais sintomas está sentindo para que o médico possa analizar previamente.
+    
+    sintomas = ["Tontura", "Náusea", "Vômitos", "Resfriado", "Indisposição", "Dores no corpo", "Febre", "Diarréia", "Dor de cabeça",
+    "Gases", "Desmaio", "Tosse", "Dor ocular", "Dor de garganta"]
+
+    print("Selecione os sintomas que está sentindo (digite os números separados por espaço):")
+    for i, sintoma in enumerate(sintomas, 1):
+        print(f"{i}. {sintoma}")
+
+    numeros_sintomas = input().split()
+    sintomas_selecionados = [sintomas[int(numero) - 1] for numero in numeros_sintomas]
+
+    return sintomas_selecionados
