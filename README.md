@@ -13,3 +13,4 @@ Para que assim ele seja atendido de maneira rápida e não tenha que perder temp
 urgência ele escolherá qual situação melhor se encaixa com a dele e assim não tendo que esperar para ser atendido.
 
 Link para o vídeo do código:
+https://www.youtube.com/watch?v=SjbVUcnI51Q
