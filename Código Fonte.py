@@ -60,3 +60,58 @@ def exibir_relatorio_paciente(info_paciente, sintomas_selecionados):
     for sintoma in sintomas_selecionados:
         print(f"- {sintoma}")
     print("Seus dados serão encaminhados para um de nossos médicos! Por favor aguarde.")
+
+def info_emergência():
+    #Caso o usuário diga que sua situação é urgente ele irá preencher apenas esses dados.
+    
+    nome = input("Digite seu nome: ")
+    idade = input("Digite sua data de nascimento (DD/MM/AAAA): ")
+    genero_biologico = ["Masculino", "Feminino"]
+    
+    for i, genero in enumerate(genero_biologico, 1):
+        print(f"{i}. {genero}")
+    
+    numero_genero_biologico = int(input("Digite o número correspondente ao seu gênero biológico: "))
+    genero_selecionado = genero_biologico[numero_genero_biologico - 1]
+
+    print("Agora, selecione como você se identifica:")
+    generos_identificacao = ["Masculino", "Feminino", "Não-Binárie", "Outro"]
+
+    for i, genero_id in enumerate(generos_identificacao, 1):
+        print(f"{i}. {genero_id}")
+
+    numero_genero_identificacao = int(input("Digite o número correspondente à sua identificação de gênero: "))
+    genero_identificacao_selecionado = generos_identificacao[numero_genero_identificacao - 1]
+
+    return {
+        "Nome": nome, 
+        "Data de Nascimento": idade,  
+        "Gênero Biológico": genero_selecionado,
+        "Identificação de Gênero": genero_identificacao_selecionado
+        }
+
+
+def atendimento():
+    resposta = input("Sua situação é uma emergência? Digite sim ou não: ")
+    # Responder sim caso seja uma situação urgente (atropelamento, Gravidez, Risco de morte, etc)
+    if resposta.lower() == 'sim':
+      
+        print("Ok, seu atendimento está sendo preparado! Por favor preencha esses dados.")
+        informações_de_emergência = info_emergência()
+        print("Obrigado, seu atendimento está sendo preparado!")
+    #Responder não caso seja atendimento referente a doenças e sintomas mais preocupantes
+    
+    elif resposta.lower() == "não":
+        print("Certo, então preencha seus dados: ")
+        info_paciente = informacoes_paciente()
+        sintomas_selecionados = sintomas()
+        exibir_relatorio_paciente(info_paciente, sintomas_selecionados)
+    
+    else:
+        print('Resposta inválida. Por favor, responda "sim" ou "não".')  
+
+def main():
+    print("Bem-vindo ao sistema de informações de pacientes!")
+    atendimento()
+
+main()
