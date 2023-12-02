@@ -45,3 +45,18 @@ def sintomas():
     sintomas_selecionados = [sintomas[int(numero) - 1] for numero in numeros_sintomas]
 
     return sintomas_selecionados
+
+def exibir_relatorio_paciente(info_paciente, sintomas_selecionados):
+    #Parte que irá mostrar tudo que foi feito pelo usuário.
+    
+    print("\nRelatório do Paciente:")
+    print(f"Nome: {info_paciente['Nome']}")
+    print(f"Data de Nascimento: {info_paciente['Data de Nascimento']}")
+    print(f"Peso: {info_paciente['Peso']} kg")
+    print(f"Altura: {info_paciente['Altura']} metros")
+    print(f"Gênero Biológico: {info_paciente['Gênero Biológico']}")
+    print(f"Identificação de Gênero: {info_paciente['Identificação de Gênero']}")
+    print("Sintomas:")
+    for sintoma in sintomas_selecionados:
+        print(f"- {sintoma}")
+    print("Seus dados serão encaminhados para um de nossos médicos! Por favor aguarde.")
