@@ -2,9 +2,9 @@
 Repositório público do projeto Global Solution FIAP da matéria Computational Thinking using Python
 
 Nome e RM dos integrantes:
-Bruno Nogueira Burian 552863
-Leonardo Chaves da Silva 552707
-Pedro Almeida Durães 553119
+Bruno Nogueira Burian 552863 1TDSPT
+Leonardo Chaves da Silva 552707 1TDSPT
+Pedro Almeida Durães 553119 1TDSPB
 
 Descrição do projeto "Sem Tempo a Perder":
 Ficha preenchida pelo paciente do hospital com o objetivo de obter informações sobre o paciente e o que ele está sentindo,
